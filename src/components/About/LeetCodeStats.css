@@ -1,0 +1,58 @@
+.leetcode-section {
+  background-color: #0d1117;
+  padding: 60px 0;
+  color: white;
+}
+
+.project-heading {
+  color: white;
+  padding-bottom: 30px;
+}
+
+.chart-wrapper {
+  width: 140px;
+  height: 140px;
+  text-align: center;
+}
+
+.status-text {
+  margin-top: 10px;
+  color: #22c55e;
+  font-size: 1rem;
+}
+
+.stats-boxes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.stat-box {
+  background-color: #2a2a2a;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.stat-box.easy {
+  color: #0ea5e9;
+}
+
+.stat-box.medium {
+  color: #facc15;
+}
+
+.stat-box.hard {
+  color: #ef4444;
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.highlight {
+  color: #facc15;
+  font-weight: bold;
+}
