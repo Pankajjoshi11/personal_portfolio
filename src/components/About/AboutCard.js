@@ -11,11 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Pankaj Joshi </span>
             from <span className="purple"> Mumbai, India.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
+            I am currently studying B.E. in I.T. from Thadomal Shahani Engineering College. <span className="purple"> (Mumbai University) </span>
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
-            <br />
+            
             <br />
             Apart from coding, some other activities that I love to do!
           </p>

@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.skill-card-view {
+  background-color: #1a1a1a;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(166, 74, 201, 0.3);
+  transition: 0.4s ease-in-out;
+}
+
+.skill-card-view:hover {
+  border-color: #a64ac9;
+  box-shadow: 0 0 25px rgba(166, 74, 201, 0.7);
+}
+
+.text-purple {
+  color: #d78aff;
+}
