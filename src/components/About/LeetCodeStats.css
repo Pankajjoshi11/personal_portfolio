@@ -56,3 +56,72 @@
   color: #facc15;
   font-weight: bold;
 }
+.expertise-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+}
+
+.expertise-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.expertise-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #a020f0;
+  border-radius: 16px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(160, 32, 240, 0.6);
+}
+
+.expertise-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 250px;
+}
+
+.expertise-icon {
+  font-size: 2.2rem;
+  color: #a020f0;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #a020f0;
+  }
+  to {
+    text-shadow: 0 0 20px #a020f0, 0 0 10px #a020f0;
+  }
+}
+
+.expertise-left h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #dda0dd;
+  padding-top: 8px;
+}
+
+.expertise-right {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  text-align: right;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import pankaj_profile from "../../Assets/pankaj_profile.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -57,8 +57,9 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={pankaj_profile} className="img-fluid profile-pic" alt="avatar" />
             </Tilt>
+
           </Col>
         </Row>
         <Row>
@@ -78,16 +79,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
+          
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/pankaj-joshi-0b8103255/"

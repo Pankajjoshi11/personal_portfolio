@@ -137,11 +137,11 @@ const LeetCodeStats = () => {
               <span className="highlight">📊 Active Days:</span> {activeDays}
             </p>
             <p>
-              <span className="highlight">🏅 Badges:</span> 2 (e.g., 50 Days Badge)
+              <span className="highlight">🏅 Badges:</span> 2 
             </p>
             <a
               href="https://leetcode.com/Pankaj08/"
-              target="_blank"
+              target="https://leetcode.com/Pankaj08/"
               rel="noreferrer"
               className="btn btn-outline-warning mt-3"
             >

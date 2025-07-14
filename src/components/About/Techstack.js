@@ -1,32 +1,44 @@
 import React from "react";
+import { FaCode, FaDatabase, FaServer } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import "./LeetCodeStats.css";
 
-export default function Techstack() {
-  const skills = {
-    "Web Development": ["React.js", "Next.js", "Node.js"],
-    Languages: ["C++", "Java", "Python", "JavaScript", "Go (Golang)", "Solidity"],
-    Databases: ["MongoDB", "PostgreSQL", "Redis", "Firebase"],
-    "Tools & Platforms": ["Visual Studio Code", "Postman", "Slack", "Vercel", "macOS"],
-    "Version Control": ["Git"],
-  };
+export default function TechExpertise() {
+  const expertise = [
+    {
+      icon: <FaCode />,
+      title: "Languages",
+      items: ["C", "C++", "Python", "JavaScript", "TypeScript"],
+    },
+    {
+      icon: <FaDatabase />,
+      title: "Web & Databases",
+      items: ["React.js", "Next.js", "Flask", "Node.js", "MongoDB", "MySQL", "Firebase"],
+    },
+    {
+      icon: <GiArtificialIntelligence />,
+      title: "AI & Machine Learning",
+      items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP","Data Preprocessing", "Deep Learning", "Streamlit" ],
+    },
+    {
+      icon: <FaServer />,
+      title: "Tools",
+      items: [ "Git","Github", "Postman"],
+    },
+  ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6 rounded-xl bg-[#1a1a1a] border-2 border-transparent hover:border-purple-500 hover:shadow-purple-500/50 shadow-md transition-all duration-300">
-      <h2 className="text-center text-purple-300 text-2xl font-semibold mb-6">
-        🛠️ Tech Stack
-      </h2>
-
-      {Object.entries(skills).map(([category, items], idx) => (
-        <div key={idx} className="mb-5">
-          <h3 className="text-lg text-purple-400 font-medium underline mb-2">
-            {category}
-          </h3>
-          <ul className="list-disc list-inside text-white space-y-1">
-            {items.map((item, index) => (
-              <li key={index} className="hover:text-purple-300 transition">
-                {item}
-              </li>
-            ))}
-          </ul>
+    <div className="expertise-wrapper">
+      <h2 className="expertise-heading">Technical Expertise</h2>
+      {expertise.map((item, index) => (
+        <div key={index} className="expertise-card">
+          <div className="expertise-left">
+            <div className="expertise-icon">{item.icon}</div>
+            <h3>{item.title}</h3>
+          </div>
+          <div className="expertise-right">
+            <p>{item.items.join(", ")}</p>
+          </div>
         </div>
       ))}
     </div>
