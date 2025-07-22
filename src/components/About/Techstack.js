@@ -8,7 +8,7 @@ export default function TechExpertise() {
     {
       icon: <FaCode />,
       title: "Languages",
-      items: ["C", "C++", "Python", "JavaScript", "TypeScript"],
+      items: ["C", "C++","Java", "Python", "JavaScript", "TypeScript"],
     },
     {
       icon: <FaDatabase />,

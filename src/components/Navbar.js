@@ -95,7 +95,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/contact"
                 onClick={() => updateExpanded(false)}
               >
                 <BiPhone style={{ marginBottom: "2px" }} /> Contact

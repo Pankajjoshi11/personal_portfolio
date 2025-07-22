@@ -63,3 +63,15 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow */
 }
 
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
