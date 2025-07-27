@@ -8,6 +8,8 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import Face from "../../Assets/Projects/Face.png"
+import travelMate from "../../Assets/Projects/travelMate.png"
 
 function Projects() {
   return (
@@ -23,12 +25,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={travelMate}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="TravelMate"
+              description="TravelMate is an AI-driven trip recommendation platform designed to provide personalized travel itineraries. By integrating Google Gemini's Generative AI API and Google Places API, the platform offers intelligent trip planning, location insights, and real-time recommendations to enhance the travel experience."
+              ghLink="https://github.com/Pankajjoshi11/AI_itinerary_generator"
+              demoLink="https://ai-itinerary-generator-six.vercel.app/"
             />
           </Col>
 
@@ -36,21 +38,20 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Authenticity"
+              description="Authenticity is a full-stack AI-based content evaluation tool designed to verify the originality and quality of written text. It detects AI-generated content using RoBERTa, checks grammar through logistic regression and TF-IDF, validates summary coherence with K-Means clustering, and flags plagiarism using cosine similarity and MongoDB."
+              ghLink="https://github.com/Pankajjoshi11/Authenticity_ai_detection_tool"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={Face}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Face Recognition Attendance Tool"
+              description="A sophisticated face recognition tool built with React, TypeScript, and ShadCN on the frontend, seamlessly integrated with a Node.js backend and MongoDB for secure data management. This application leverages models from face-api.js to accurately recognize employee faces, automatically mark attendance, and display a comprehensive attendance history."
+              ghLink="https://github.com/Pankajjoshi11/Face_Recognition"
+              demoLink="https://face-recognition-lyart.vercel.app/"              
             />
           </Col>
 
@@ -58,10 +59,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="SaveTheDate"
+              description="Welcome to SaveTheDate, a unique wedding booking platform connecting tourists and foreigners with the grandeur of Indian weddings. Experience the traditions, music, food, and vibrant culture that make Indian weddings unforgettable."
+              ghLink="https://github.com/Pankajjoshi11/SaveTheDate_wedding"
             />
           </Col>
 
@@ -69,10 +69,9 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Document Q&A RAG Assistant"
+              description="An intelligent document question-answering system built with Streamlit that uses Retrieval-Augmented Generation (RAG) to provide accurate, context-aware answers from uploaded documents."
+              ghLink="https://github.com/Pankajjoshi11/Document-Q-A-RAG-assistant"
             />
           </Col>
 
@@ -80,11 +79,9 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Walmart Retail Sales Analysis"
+              description="A complete data-driven project that analyzes Walmart-style retail transactions, extracts actionable insights, and predicts customer satisfaction levels using machine learning. The project includes exploratory data analysis, feature engineering, data cleaning, class imbalance handling, and model building with a robust ML pipeline"
+              ghLink="https://github.com/Pankajjoshi11/walmart_retail_analysis"
             />
           </Col>
         </Row>
