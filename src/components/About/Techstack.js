@@ -23,7 +23,7 @@ export default function TechExpertise() {
     {
       icon: <FaServer />,
       title: "Tools",
-      items: [ "Git","Github", "Postman"],
+      items: [ "Git","Github", "Postman","Docker"],
     },
   ];
 
