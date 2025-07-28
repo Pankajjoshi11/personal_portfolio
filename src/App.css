@@ -75,3 +75,22 @@
 }
 
 
+
+/* Add to your CSS file or in a CSS module */
+.contact-button {
+  background-color: #ce5ff8;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+  background-color: #b649db;
+  transform: scale(1.05);
+}

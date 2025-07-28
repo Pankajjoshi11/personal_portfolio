@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
@@ -27,6 +28,12 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
+              </div>
+
+              <div style={{ padding: 30, textAlign: "left" }}>
+                <Link to="/contact">
+                  <button className="contact-button" type="submit">Contact</button>
+                </Link>
               </div>
             </Col>
 
