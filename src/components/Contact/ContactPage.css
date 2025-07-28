@@ -142,36 +142,45 @@
 
 .info-item {
   display: flex;
+  flex-direction: column;
+}
+
+.info-top-row {
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .info-icon-wrapper {
-  width: 3rem;
-  height: 3rem;
-  background-color: rgba(168, 85, 247, 0.2);
-  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .info-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #c4b5fd;
+  width: 20px;
+  height: 20px;
+  color: white;
 }
 
 .info-label {
   font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
   color: white;
-  margin-top: 10px;
 }
 
 .info-value {
-  color: #c4b5fd;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0.4rem 0 0 2.9rem; /* aligned under label */
+  word-break: break-all;
 }
+
+
 
 .response-card {
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(139, 92, 246, 0.2));

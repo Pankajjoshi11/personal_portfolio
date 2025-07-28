@@ -10,42 +10,62 @@ import LeetCodeStats from "./LeetCodeStats";
 
 function About() {
   return (
-    <Container fluid className="about-section">
-      <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I am</strong>
-            </h1>
-            <Aboutcard />
-          </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
-          </Col>
-        </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
+    <main>
+      <Container fluid className="about-section">
+        <Particle />
+        <Container>
+          <section aria-labelledby="about-heading">
+            <Row style={{ justifyContent: "center", padding: "10px" }}>
+              <Col
+                md={7}
+                style={{
+                  justifyContent: "center",
+                  paddingTop: "30px",
+                  paddingBottom: "50px",
+                }}
+              >
+                <h1 id="about-heading" style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                  Know Who <strong className="purple">I am</strong>
+                </h1>
+                <article>
+                  <Aboutcard />
+                </article>
+              </Col>
 
-        <Techstack />
+              <Col
+                md={5}
+                style={{ paddingTop: "120px", paddingBottom: "50px" }}
+                className="about-img"
+                as="figure"
+              >
+                <img src={laptopImg} alt="About me illustration" className="img-fluid" />
+              </Col>
+            </Row>
+          </section>
 
-        
-        <LeetCodeStats/>
-        <Github />
+          <section aria-labelledby="skills-heading">
+            <h2 id="skills-heading" className="project-heading">
+              Professional <strong className="purple">Skillset</strong>
+            </h2>
+            <Techstack />
+          </section>
+
+          <section aria-labelledby="leetcode-heading">
+            <h2 id="leetcode-heading" className="project-heading">
+              Leetcode <strong className="purple">Stats</strong>
+            </h2>
+              <LeetCodeStats />
+          </section>
+
+          <section aria-labelledby="github-heading">
+            <h2 id="github-heading" className="project-heading">
+              <strong className="purple">GitHub</strong> Activity
+            </h2>
+            <Github />
+          </section>
+        </Container>
       </Container>
-    </Container>
+    </main>
   );
 }
 

@@ -8,12 +8,12 @@ import Type from "./Type";
 
 function Home() {
   return (
-    <main>
+    <section>
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col md={7} as="header" className="home-header">
+            <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
@@ -21,28 +21,26 @@ function Home() {
                 </span>
               </h1>
 
-              <h2 className="heading-name">
+              <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> Pankaj Joshi</strong>
-              </h2>
+              </h1>
 
-              <section aria-label="Typewriter roles" style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
-              </section>
+              </div>
 
-              <nav style={{ paddingTop: 15, paddingLeft: 50, textAlign: "left" }}>
+              <div style={{ padding: 30, textAlign: "left" }}>
                 <Link to="/contact">
-                  <button className="contact-button">
-                    Contact Me
-                  </button>
+                  <button className="contact-button" type="submit">Contact</button>
                 </Link>
-              </nav>
+              </div>
             </Col>
 
-            <Col md={5} as="aside" style={{ paddingBottom: 20 }}>
+            <Col md={5} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}
-                alt="Illustration of Pankaj Joshi working on a computer"
+                alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
               />
@@ -50,11 +48,8 @@ function Home() {
           </Row>
         </Container>
       </Container>
-
-      <section aria-label="About Section">
-        <Home2 />
-      </section>
-    </main>
+      <Home2 />
+    </section>
   );
 }
 

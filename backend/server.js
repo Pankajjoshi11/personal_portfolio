@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import leetcodeRoute from './leetcodeRoute.js';
 
 dotenv.config();
 
@@ -10,6 +11,8 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
+app.use('/api', leetcodeRoute);
+
 app.use(express.json());
 
 // Email transporter configuration

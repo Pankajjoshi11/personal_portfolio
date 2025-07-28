@@ -78,19 +78,76 @@
 
 /* Add to your CSS file or in a CSS module */
 .contact-button {
-  background-color: #ce5ff8;
+  padding: 12px 24px;
+  background-color: #a943ce;
   color: white;
-  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100; /* Increased to ensure button is above all elements */
+  pointer-events: auto;
+  transition: box-shadow 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #b649db;
-  transform: scale(1.05);
+  box-shadow: 0 0 15px #ce5ff8;
+}
+
+/* Ensure parent containers are clickable */
+.home-section {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.home-content {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.home-header {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+/* Lower z-index of Particle component canvas */
+canvas.particles-js-canvas-el,
+.tsparticles-canvas-el {
+  z-index: 1 !important; /* Override default particle canvas z-index */
+  pointer-events: none; /* Allow clicks to pass through particles */
+}
+/* Social icons clickable fix */
+.home-about-social {
+  position: relative;
+  z-index: 50; /* Higher than particles and most backgrounds */
+  pointer-events: auto;
+}
+
+.home-about-social-links {
+  z-index: 55;
+  position: relative;
+  pointer-events: auto;
+}
+
+.home-social-icons svg {
+  color: white !important;
+  font-size: 24px;
+}
+
+.home-social-icons{
+  z-index: 90;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Ensure all social icons are styled to avoid overlaps */
+.social-icons a {
+  position: relative;
+  z-index: 60;
+  pointer-events: auto;
 }

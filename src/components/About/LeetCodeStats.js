@@ -16,7 +16,7 @@ const LeetCodeStats = () => {
 
   useEffect(() => {
     axios
-      .get("https://leetcode-stats-api.herokuapp.com/Pankaj08")
+      .get("http://localhost:3001/api/leetcode")
       .then((res) => {
         const stats = res.data;
         setData(stats);
