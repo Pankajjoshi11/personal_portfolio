@@ -16,7 +16,7 @@ const LeetCodeStats = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/leetcode")
+      .get("https://personal-portfolio-tku6.onrender.com/api/leetcode")
       .then((res) => {
         const stats = res.data;
         setData(stats);
