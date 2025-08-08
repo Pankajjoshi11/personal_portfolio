@@ -36,7 +36,7 @@ const ContactForm = () => {
     setStatus({ type: 'loading', message: 'Sending your message...' });
 
     try {
-      const response = await fetch('https://personal-portfolio-tku6.onrender.com/api/contact', {
+      const response = await fetch('https://personal-portfolio-pankaj.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

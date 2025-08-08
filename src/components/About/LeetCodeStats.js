@@ -16,7 +16,7 @@ const LeetCodeStats = () => {
 
   useEffect(() => {
     axios
-      .get("https://personal-portfolio-tku6.onrender.com/api/leetcode")
+      .get("https://personal-portfolio-pankaj.onrender.com/api/leetcode")
       .then((res) => {
         const stats = res.data;
         setData(stats);
@@ -76,8 +76,6 @@ const LeetCodeStats = () => {
   }
 
   const {
-    totalSolved,
-    totalQuestions,
     easySolved,
     totalEasy,
     mediumSolved,
@@ -86,17 +84,21 @@ const LeetCodeStats = () => {
     totalHard,
   } = data;
 
+  // Force totalSolved to sum of all
+  const totalSolved = easySolved + mediumSolved + hardSolved;
+  const totalQuestions = 3642; // updated total
   const percentage = ((totalSolved / totalQuestions) * 100).toFixed(1);
 
   return (
     <Container fluid className="leetcode-section" id="leetcode">
       <Container>
-        <h1 className="project-heading text-center">
-          <strong className="purple">LeetCode </strong> Stats
-        </h1>
         <Row className="justify-content-center align-items-center mt-4">
           <Col md={6} className="d-flex flex-column align-items-center">
-            <div className="chart-wrapper mb-4">
+            {/* Smaller Circle */}
+            <div
+              className="chart-wrapper mb-4"
+              style={{ width: "200px", height: "300px" }}
+            >
               <CircularProgressbar
                 value={totalSolved}
                 maxValue={totalQuestions}
@@ -105,11 +107,12 @@ const LeetCodeStats = () => {
                   textColor: "#fff",
                   pathColor: "#facc15",
                   trailColor: "#3a3a3a",
-                  textSize: "16px",
+                  textSize: "12px",
                 })}
               />
-              <div className="status-text">✔ Solved</div>
+             
             </div>
+
             <div className="stats-boxes">
               <div className="stat-box easy">
                 <strong>Easy</strong>
@@ -137,13 +140,14 @@ const LeetCodeStats = () => {
               <span className="highlight">📊 Active Days:</span> {activeDays}
             </p>
             <p>
-              <span className="highlight">🏅 Badges:</span> 2 
+              <span className="highlight">🏅 Badges:</span> 2
             </p>
             <a
-              href="https://leetcode.com/Pankaj08/"
-              target="https://leetcode.com/Pankaj08/"
+              href="https://leetcode.com/u/Pankaj08/" // replace with your own
+              target="_blank"
               rel="noreferrer"
               className="btn btn-outline-warning mt-3"
+              style={{ position: "relative", zIndex: 999 }}
             >
               View Full Profile on LeetCode
             </a>
