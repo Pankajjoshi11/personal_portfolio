@@ -41,17 +41,30 @@ router.get('/leetcode', async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    // Convert to your frontend's expected format
+    // Get solved counts by difficulty
+    const easySolved = user.submitStats.acSubmissionNum.find(d => d.difficulty === "Easy")?.count || 0;
+    const totalEasy = user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Easy")?.count || 0;
+
+    const mediumSolved = user.submitStats.acSubmissionNum.find(d => d.difficulty === "Medium")?.count || 0;
+    const totalMedium = user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Medium")?.count || 0;
+
+    const hardSolved = user.submitStats.acSubmissionNum.find(d => d.difficulty === "Hard")?.count || 0;
+    const totalHard = user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Hard")?.count || 0;
+
+    // Total solved = sum of all difficulty counts
+    const totalSolved = easySolved + mediumSolved + hardSolved;
+    const totalQuestions = totalEasy + totalMedium + totalHard;
+
     const stats = {
       status: "success",
-      totalSolved: user.submitStats.acSubmissionNum.reduce((a, b) => a + b.count, 0),
-      totalQuestions: user.submitStats.totalSubmissionNum.reduce((a, b) => a + b.count, 0),
-      easySolved: user.submitStats.acSubmissionNum.find(d => d.difficulty === "Easy")?.count || 0,
-      totalEasy: user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Easy")?.count || 0,
-      mediumSolved: user.submitStats.acSubmissionNum.find(d => d.difficulty === "Medium")?.count || 0,
-      totalMedium: user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Medium")?.count || 0,
-      hardSolved: user.submitStats.acSubmissionNum.find(d => d.difficulty === "Hard")?.count || 0,
-      totalHard: user.submitStats.totalSubmissionNum.find(d => d.difficulty === "Hard")?.count || 0,
+      totalSolved,
+      totalQuestions,
+      easySolved,
+      totalEasy,
+      mediumSolved,
+      totalMedium,
+      hardSolved,
+      totalHard,
       submissionCalendar: JSON.parse(user.submissionCalendar || "{}")
     };
 
