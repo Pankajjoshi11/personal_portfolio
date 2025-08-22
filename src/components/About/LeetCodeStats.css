@@ -56,8 +56,12 @@
   color: #facc15;
   font-weight: bold;
 }
+/* Responsive CSS for TechExpertise (ONLY the expertise styles) */
+
 .expertise-wrapper {
+  box-sizing: border-box;
   max-width: 1000px;
+  width: 100%;
   margin: 40px auto;
   padding: 20px;
   font-family: "Segoe UI", sans-serif;
@@ -66,64 +70,176 @@
 
 .expertise-heading {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: white;
+  font-size: clamp(1.6rem, 2.5vw + 1rem, 2.5rem);
+  margin-bottom: 32px;
+  color: #ffffff;
 }
 
 .expertise-card {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;                 /* allow columns to wrap on small screens */
   align-items: flex-start;
+  gap: 14px;                       /* space between left/right on wrap */
   background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid #a020f0;
   border-radius: 16px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
   box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;                /* keep glow & long content inside card */
 }
 
 .expertise-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(160, 32, 240, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 0 28px rgba(160, 32, 240, 0.55);
 }
 
 .expertise-left {
   display: flex;
   align-items: center;
-  gap: 15px;
-  min-width: 250px;
+  gap: 12px;
+  flex: 1 1 220px;                 /* grows, shrinks, min width */
+  min-width: 180px;
 }
 
 .expertise-icon {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 2vw + 0.6rem, 2.2rem);
   color: #a020f0;
   animation: glow 2s ease-in-out infinite alternate;
+  flex-shrink: 0;                  /* keep icon visible on small screens */
 }
 
 @keyframes glow {
-  from {
-    text-shadow: 0 0 5px #a020f0;
-  }
-  to {
-    text-shadow: 0 0 20px #a020f0, 0 0 10px #a020f0;
-  }
+  from { text-shadow: 0 0 5px #a020f0; }
+  to { text-shadow: 0 0 18px #a020f0, 0 0 10px #a020f0; }
 }
 
 .expertise-left h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: clamp(1.05rem, 1.2vw + 0.7rem, 1.4rem);
+  font-weight: 700;
   color: #dda0dd;
-  padding-top: 8px;
+  margin: 0;
+  padding-top: 4px;
 }
 
 .expertise-right {
-  flex: 1;
-  font-size: 1.2rem;
+  flex: 2 1 360px;                 /* lets text shrink/wrap responsibly */
+  min-width: 200px;
+  font-size: clamp(1rem, 0.7vw + 0.85rem, 1.2rem);
   color: #e0e0e0;
   line-height: 1.6;
   text-align: right;
+  min-height: 1px;                 /* fix for some flexbox overflows */
+}
+
+/* Ensure the tech stack text always stays inside the box on mobile */
+.expertise-right p {
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;         /* break long tokens if needed */
+  word-break: break-word;
+
+}
+
+/* ---------- Responsive Tweaks ---------- */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+  .expertise-wrapper {
+    padding: 16px;
+    margin: 28px auto;
+  }
+  .expertise-card {
+    padding: 16px;
+  }
+  .expertise-right {
+    text-align: left;              /* easier reading on narrow screens */
+  }
+}
+
+/* Phones (≤ 640px) */
+@media (max-width: 640px) {
+  .expertise-card {
+    gap: 10px;
+    padding: 14px;
+  }
+  .expertise-left {
+    flex: 1 1 100%;
+    min-width: 0;                  /* allow full-width stacking */
+  }
+  .expertise-right {
+    flex: 1 1 100%;
+    min-width: 0;                  /* allow text to wrap within card */
+    font-size: 0.98rem;
+  }
+  .expertise-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small phones (≤ 400px) */
+@media (max-width: 400px) {
+  .expertise-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+  .expertise-left h3 {
+    font-size: 1rem;
+  }
+  .expertise-right {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 992px) {
+  .expertise-wrapper {
+    padding: 16px;
+    margin: 28px auto;
+  }
+  .expertise-card {
+    padding: 16px;
+  }
+  .expertise-right {
+    text-align: left;              /* easier reading on narrow screens */
+  }
+}
+
+/* Phones (≤ 640px) */
+@media (max-width: 640px) {
+  .expertise-card {
+    gap: 10px;
+    padding: 14px;
+  }
+  .expertise-left {
+    flex: 1 1 100%;
+    min-width: 0;                  /* allow full-width stacking */
+  }
+  .expertise-right {
+    flex: 1 1 100%;
+    min-width: 0;                  /* allow text to wrap within card */
+    font-size: 0.98rem;
+  }
+  .expertise-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small phones (≤ 400px) */
+@media (max-width: 400px) {
+  .expertise-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+  .expertise-left h3 {
+    font-size: 1rem;
+  }
+  .expertise-right {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
 }
 /* LeetCodeStats.css */
 
